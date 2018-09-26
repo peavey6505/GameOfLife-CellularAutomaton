@@ -1,0 +1,61 @@
+﻿<Window x:Class="GameOfLifeWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLifeWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1145.45" Width="1357" >
+    <Grid x:Name="gd">
+        <Grid>
+            <Canvas x:Name="board" HorizontalAlignment="Left" Width="1209"
+                Height="1094" Margin="130,10,0,0" VerticalAlignment="Top" />
+            <RadioButton x:Name="PeriodicRadio" Content="Periodic" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" IsChecked="True"/>
+            <RadioButton x:Name="NotPeriodicRadio" Content="Not periodic" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="ClearButton" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="75" Content="Clear" Click="ClearButton_Click" Height="22" IsEnabled="False"/>
+            <Button x:Name="GrowButton" HorizontalAlignment="Left" Margin="10,776,0,0" VerticalAlignment="Top" Width="75" Content="Grow" Click="GrowButton_Click" Height="22" IsEnabled="False" RenderTransformOrigin="0.507,-4.136"/>
+
+            <Grid>
+                <RadioButton x:Name="VonNeumanRadio" Content="VonNeuman" HorizontalAlignment="Left" Margin="11,299,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="MooreRadio" Content="Moore" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="RightHexRadio" Content="Hex Right" HorizontalAlignment="Left" Margin="10,339,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="LeftHexRadio" Content="Hex Left" HorizontalAlignment="Left" Margin="11,359,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="HexRandRadio" Content="Hex Rand" HorizontalAlignment="Left" Margin="11,379,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="PentRandRadio" Content="PentaRadnRadio" HorizontalAlignment="Left" Margin="11,399,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+            <Grid>
+                <TextBox x:Name="GrainCount" HorizontalAlignment="Left" Height="23" Margin="20,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+                <Label Content="Grain count:" HorizontalAlignment="Left" Margin="20,469,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="SubmitGrainCountButton" Content="Submit" HorizontalAlignment="Left" Margin="21,667,0,0" VerticalAlignment="Top" Width="75" Click="SubmitGrainCountButton_Click" />
+                <RadioButton x:Name="RandomGrainButton" Content="Random" HorizontalAlignment="Left" Margin="21,532,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="RandomWithRGrainButton" Content="Random with R" HorizontalAlignment="Left" Margin="21,552,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="TemporaryGraintButton" Content="Temporary" HorizontalAlignment="Left" Margin="21,635,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="RadiusTextBox" HorizontalAlignment="Left" Height="23" Margin="37,593,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+                <Label Content="Radius:" HorizontalAlignment="Left" Margin="37,567,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+            <Grid>
+                <CheckBox x:Name="TemporaryRandomGrainRadio" Content="Temporary Rand" HorizontalAlignment="Left" Margin="20,720,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+        </Grid>
+        <Grid>
+            <TextBox x:Name="IdCount" HorizontalAlignment="Left" Height="23" Margin="10,872,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="55"/>
+            <Label  Content="ID count" HorizontalAlignment="Left" Margin="10,841,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="MooreButton" Content="Start" HorizontalAlignment="Left" Margin="10,925,0,0" VerticalAlignment="Top" Width="75" Click="MooreButton_Click" />
+            <Button x:Name="InitializeMC" Content="Init MC" HorizontalAlignment="Left" Margin="10,900,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.249,-0.117" Click="InitializeMC_Click">
+
+            </Button>
+            <Button x:Name="stopButon" Content="Stop" HorizontalAlignment="Left" Margin="10,950,0,0" VerticalAlignment="Top" Width="75" Click="stopButon_Click"/>
+
+
+        </Grid>
+        <Button x:Name="InitializeButton" Content="Initialize" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" />
+        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="75" Click="StopButton_Click" IsEnabled="False" />
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click_1" IsEnabled="False"/>
+        <TextBox x:Name="WidthTextBox" HorizontalAlignment="Left" Height="23" Margin="10,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Text="50"/>
+        <Label Content="Size" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.046,-0.2"/>
+
+    </Grid>
+</Window>
